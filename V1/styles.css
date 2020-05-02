@@ -1,0 +1,178 @@
+@charset "utf-8";
+@font-face {
+    font-family: MontserratRegular;
+    src: url('Montserrat-Regular.ttf')
+}
+@font-face {
+    font-family: BadScript;
+    src: url('BadScript-Regular.ttf');
+}
+
+/*
+    M02 Project V1 - Basic HTML and CSS
+
+    Style Sheet
+    Author: Zoe Dimof
+    Date: 5/2/2020
+
+    Filename: styles.css
+*/
+
+/* PAGE FORMAT */
+
+/* M2LO3 Demonstrate style precedence and inheritance in CSS
+Inheritance is applied here. The font is passed down to all of the text in it's children.*/
+body {
+    font-family: MontserratRegular, sans-serif;
+    margin: 0px;
+    background-color: rgb(248, 235, 216);
+    background-color: hsl(35, 69%, 91%);
+}
+
+/* M2LO14 Demonstrate and explain the use of progressive enhancement in CSS
+I have used progressive enhancement in the style below, as well as in several other styles. Progressive enhancement is a technique where you place styles from older standards first, and place styles from newer standards last. Browsers that are older and do not recognize HSL values will use the RGB values instead. New browsers will use the style that comes last, which in this case is HSL. */
+body > header {
+    padding: 3px;
+    background-color: rgb(60, 140, 215);
+    background-color: hsl(209, 66%, 54%);
+}
+
+article {
+    padding: 30px;
+}
+
+/* M2LO6 Demonstrate a CSS id and a CSS class selector
+This is an id selector. It modifies the img element with the 'homeimg' id. */
+img#homeimg {
+    padding: 30px;
+}
+
+img#museumimg {
+    padding: 30px;
+    padding-bottom: 0px;
+}
+
+img#shopimg {
+    padding: 30px;
+    padding-bottom: 0px;
+}
+
+/* M2LO5 Demonstrate contextual selectors
+This is a parent > child contextual selector I made that would effect the padding only in articles that are the child of sections that are childs of the body. */
+body > section > article {
+    padding-top: 10px;
+}
+
+/* M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector
+This is a pseudo-class selector. It applies only to the last section that is a child of the body. */
+body > section:last-of-type {
+    text-align: center;
+    padding: 10px;
+}
+
+body > section img {
+    padding: 10px;
+    padding-left: 30px;
+}
+
+a#last {
+    padding: 0px;
+}
+
+/* NAVIGATION */
+
+/* M2LO12 Demonstrate how CSS can change presentation of page elements
+Below is the style for the navigation menu. I added padding and a background color to create a bar at the top of the page that the navigation links sit within. */
+nav {
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: rgb(138, 216, 255);
+    background-color: hsl(200, 100%, 77%);
+}
+
+/* M2LO6 Demonstrate a CSS id and a CSS class selector
+This is a class selector. It modifies li elements that have the class 'nav'. */
+li.nav {
+    display: inline;
+    padding-right: 7%;
+}
+
+/* M2LO13 Demonstrate how CSS can change presentation of textual elements
+Below is the style that formats the links within the navigation bar. I have changed the font of the text, as well as colored it and removed the underline. */
+body > header > nav ul li a {
+    font-family: MontserratRegular, sans-serif;
+    text-decoration: none;
+    padding: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    vertical-align: middle;
+    color: white;
+    background-color: rgb(60, 140, 215);
+    background-color: hsl(209, 66%, 54%);
+}
+
+/* M2LO15 Apply colors using CSS
+Below is a style where I have applied colors. I have changed the text color for the links on the navigation bar for when you hover over them. Hovering also causes their background color to change. */
+body > header > nav ul li a:hover {
+    color: rgb(248, 235, 216);
+    color: hsl(35, 69%, 91%);
+    background-color: rgb(46, 107, 163);
+    background-color: hsl(209, 56%, 41%);
+}
+
+/* TEXT FORMAT */
+
+p {
+    text-indent: 2em;
+    padding-bottom: 1em;
+}
+
+article p {
+    color: rgb(46, 107, 163);
+    color: hsl(209, 56%, 41%);
+}
+
+p.cite {
+    text-align: left;
+    padding: 0px;
+    color: hsl(37, 22%, 62%);
+}
+
+/* M2LO11 Demonstrate a pseudo-classes and a pseudo-element selector
+This is a pseudo-element selector. It applies to the first letter within every h1 descendant of an article, that is a child of a section, that is a child of the body. It makes the first letter large. */
+body > section > article h1::first-letter, body > article h1::first-letter {
+    font-size: 2em;
+}
+
+/* M2LO5 Demonstrate contextual selectors
+This is a parent descendant contextual selector I made that will effect the font and font size of any h1 that is a descendant of an article, that is a child of a section, that is the child of the body.  */
+body > section > article h1, body > article h1 {
+    /* M2LO3 Demonstrate style precedence and inheritance in CSS
+    The Montserrat Regular font was applied to the body. But since this is a more specific style rule, the Bad Script font takes precedence. */
+    font-family: BadScript, sans-serif;
+    font-size: 2em;
+    color: rgb(46, 107, 163);
+    color: hsl(209, 56%, 41%);
+}
+
+/* M2LO7 Demonstrate a CSS attribute selector other than class or id
+This only effects the p element that has a style attribute. */
+p[style] {
+    text-indent: 0em;
+    text-decoration: underline;
+}
+
+/* ORDERED LISTS */
+
+ol.about {
+    list-style-type: circle;
+    color: rgb(46, 107, 163);
+    color: hsl(209, 56%, 41%);
+}
+
+ol li {
+    padding-bottom: 20px;
+}
