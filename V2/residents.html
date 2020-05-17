@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+    
+    <head>
+        <!--
+        M04: Project V2 - CSS for Layout and Graphic Design
+
+        Residents Page
+        Author: Zoe Dimof
+        Date: 5/16/2020
+
+        Filename: residents.html
+        -->
+
+        <meta charset="UTF-8">
+        <title>Come Visit Paradise</title>
+
+        <link href="reset.css" rel="stylesheet"/>
+        <link href="styles.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <div class="row1">
+            <header>
+                <nav>
+                    <ul>
+                        <li id="logoli" class="nav"><a id="logoa" href="index.html"><img id="logoimg" src="logo.png" alt="Paradise Logo"></a></li>
+                        <li class="nav"><a class="standard" href="attractions.html">Attractions</a></li>
+                        <li class="nav"><a class="standard" href="events.html">Events</a></li>
+                        <li class="nav"><a class="standard" href="residents.html">Residents</a></li>
+                        <li class="nav"><a class="standard" href="history.html">History</a></li>
+                        <li class="nav"><a class="standard" href="about.html">About</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+        <div class="content">
+            <div class="row2">
+                <img id="sherb_shadow" src="sherb.png" alt="sherb">
+                <img id="sherb" src="sherb.png" alt="sherb" usemap="#sherb_map">
+                <!-- M4LO7 Demonstrate the use of image maps, including determining x and y values.
+                Below is my image map. It's a circle and it links to the secret page that has a gradient background. This image map is applied to the image above. You can find it by clicking on Sherb's nose. -->
+                <map name="sherb_map">
+                    <area shape="circle" coords="277,180,10" href="secret.html" alt="Secret">
+                </map>
+                <section class="residents">
+                    <h1>Sherb</h1>
+                    <p>Placeholder text.</p>
+                </section>
+            </div>
+        </div>
+
+        <footer class="alt">
+            <p>This is an unofficial fansite. Animal Crossing and its characters belong to Nintendo.</p>
+        </footer>
+    </body>
+</html>

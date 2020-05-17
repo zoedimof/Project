@@ -1,0 +1,286 @@
+@charset "UTF-8";
+@font-face {
+    font-family: MontserratRegular;
+    src: url('Montserrat-Regular.ttf')
+}
+@font-face {
+    font-family: BadScript;
+    src: url('BadScript-Regular.ttf');
+}
+
+/*
+    M04: Project V2 - CSS for Layout and Graphic Design
+
+    Style Sheet
+    Author: Zoe Dimof
+    Date: 5/16/2020
+
+    Filename: styles.css
+*/
+
+/* GRID */
+/* M3LO6 Demonstrate formatting a grid.
+Below are styles that create a grid. Divs that have a class that begin with "row" use clear to create separated rows and divs that have a class that begin with "col" will be floated left so that elements appear next to each other as columns. */
+div[class^="row"] {
+    clear: both;
+}
+
+div[class^="col"] {
+    width: 50%;
+    float: left;
+}
+
+div.row3#home {
+    padding-top: 5%;
+    text-align: center;
+}
+
+/* PAGE FORMAT */
+/* M4LO2 Demonstrate the use of background images.
+I have replaced the body's background color for an image background. I used a seamless background image I created. */
+body {
+    font-family: MontserratRegular, sans-serif;
+    background: url("bg.png") repeat;
+    background-size: 200px auto;
+}
+
+/* M4LO4 Demonstrate the use of gradients.
+I used a gradient below, on a secret page that you can only get to by following the image map link. I didn't really have any other ideas for a gradient for the moment. */
+body#secret {
+    background: radial-gradient(circle closest-side at center center, pink, skyblue) no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+
+/* M4LO3 Demonstrate the use of rounded corners for borders.
+Below, I have given every section rounded borders. It looks nicer than the corners being sharp. */
+/* M4LO5 Demonstrate the use of text or box shadowing.
+I have also given every section element a box shadow. This shadow appears around every edge, but mainly the bottom and sides. This shadow is also blurred. */
+section {
+    width: 50%;
+    margin-top: 11%;
+    padding: 30px;
+    float: left;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: rgb(179, 163, 137) 0px 10px 20px;
+    box-shadow: hsl(37, 22%, 62%) 0px 10px 20px;
+}
+
+section#right {
+    width: 88%;
+}
+
+section#left {
+    width: 88%;
+    margin-left: 10%;
+}
+
+/* M3LO10 Demonstrate an overflow setting
+I used overflow-x: scroll on the section below to create a scrollbar. I don't want this section to get too long. */
+section.residents {
+    width: 35%;
+    margin-top: 8%;
+    position: relative;
+    left: -15%;
+    overflow-x: scroll;
+}
+
+div.content {
+    margin-left: 2%;
+    padding-top: 6%;
+}
+
+/* TEXT FORMAT */
+
+h1 {
+    font-family: BadScript, sans-serif;
+    font-size: 2em;
+    color: rgb(46, 107, 163);
+    color: hsl(209, 56%, 41%);
+}
+
+section p {
+    padding-right: 6.5%;
+    padding-left: 6.5%;
+}
+
+h1::first-letter {
+    font-size: 2em;
+}
+
+/*M3LO3 Demonstrate a clearing floats.
+I have used clear: both on the footer below. Clear makes it so that if there are other elements on a specified side the element will be pushed onto the next line. I used it here so that the footer would appear by itself under everything else, and not smushed up against the side of the image links. */
+footer {
+    clear: both;
+    padding-left: 2%;
+    color: rgb(179, 163, 137);
+    color: hsl(37, 22%, 62%);
+    font-size: 0.8em;
+    text-decoration: underline;
+}
+
+footer.alt {
+    padding-top: 1%;
+}
+
+/* IMAGE FORMAT */
+
+/* M3LO2 Demonstrate floating elements.
+Below, I have floated an image over to the left. Elements after a floating element will flow around it. I can have things appear beside this image that way. */
+img#homeimg {
+    width: 40%;
+    margin-top: 3%;
+    float: left;
+}
+
+img.imglink {
+    width: 46%;
+    margin: 1%;
+    float: left;
+}
+
+img.shopimg {
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 30%;
+}
+
+img.shopimg#shopimg, img.museumimg#museumimg {
+    margin-top: 5%;
+}
+
+img.museumimg {
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 10%;
+}
+
+div.row3#home img:hover {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+}
+
+img#sherb, img#sherb_shadow {
+    width: 30%;
+    float: left;
+    padding-top: 5%;
+}
+
+/* M4LO6 Demonstrate the use of opacity/transparency for images.
+I made the below image transparent. This is to create a sort of shadow effect for the other image. */
+/* M3LO11 Demonstrate -prefix- style browser extensions use in CSS
+/* M4LO8 Demonstrate the use of transformations for 2D or 3D images.
+I 2D skewed the image below. It was to make it look angled like a shadow. */
+/* M3LO11 Demonstrate -prefix- style browser extensions use in CSS.
+I also applied a filter to the image below. I used the WebKit browser extention. Using these with progressive enhancement is the best way to provide the most cross-browser support. */
+img#sherb_shadow {
+    height: 20vh;
+    padding-top: 27%;
+    opacity: 20%;
+    position: relative;
+    left: -14%;
+    -webkit-filter: brightness(0.3);
+    filter: brightness(0.3);
+    transform: skewX(50deg);
+}
+
+/* M3LO8B Demonstrate relative positioning.
+Below I have used relative positioning on an image. I did this so that I could position the image without affecting the other elements on the page. This is because its position is relative to itself. */
+img#sherb {
+    position: relative;
+    padding-top: 7%;
+    left: -22%;
+}
+
+/* NAVIGATION */
+
+/* M3LO9 Demonstrate fixed, static, or inherited positioning.
+I used fixed positioning on the header element below. Fixed positioning makes the element it's applied to be positioned relative to the viewport. I used it on the navigation bar so that it appears at the top of the screen, regardless of where you are on the page. */
+header {
+    width: 100%;
+    margin-left: 0%;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    background-color: rgb(138, 216, 255);
+    background-color: hsl(200, 100%, 77%);
+    border: 5px solid;
+    border-color: rgb(60, 140, 215);
+    border-color: hsl(209, 66%, 54%);
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1;
+}
+
+li.nav {
+    display: inline-block;
+    padding-right: 3%;
+    padding-left: 3%;
+    box-sizing: border-box;
+}
+
+li.nav a.standard {
+    padding: 5px 25px 5px 25px;
+    color: white;
+    background-color: rgb(60, 140, 215);
+    background-color: hsl(209, 66%, 54%);
+    border-radius: 5px;
+}
+
+li.nav a.standard:hover {
+    color: rgb(248, 235, 216);
+    color: hsl(35, 69%, 91%);
+    background-color: rgb(46, 107, 163);
+    background-color: hsl(209, 56%, 41%);
+}
+
+li#logoli a#logoa {
+    background-color: transparent;
+}
+
+li#logoli {
+    padding: 5px 120px 5px 25px;
+    background: transparent;
+}
+
+/* M3LO8A Demonstrate absolute positioning.
+Below I have positioned the logo image to be absolute. This type of positioning makes it to that the element it is applied to is positioned absolutely to its first positioned parent. Because it has no positioned parent, it is positioned according to the HTML element. It allowed me to place this element exactly where I wanted it to be. */
+img#logoimg {
+    width: 120px;
+    position: absolute;
+    top: 2px;
+    left: 10%;
+    clear: both;
+}
+
+/* FIGURE BOXES */
+figure figcaption {
+    width: 48%;
+    padding: 1%;
+    background-color: white;
+    text-align: center;
+    font-size: 0.8em;
+    color: rgb(46, 107, 163);
+    color: hsl(209, 56%, 41%);
+}
+
+figure figcaption.right {
+    margin-left: 30%;
+}
+
+figure figcaption.left {
+    margin-left: 10%;
+}
+
+/* ABOUT */
+ol.about {
+    list-style-type: circle;
+    color: rgb(46, 107, 163);
+    color: hsl(209, 56%, 41%);
+}
+
+ol li {
+    padding-bottom: 20px;
+}
