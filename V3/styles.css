@@ -1,0 +1,422 @@
+@charset "UTF-8";
+@font-face {
+    font-family: MontserratRegular;
+    src: url('Montserrat-Regular.ttf')
+}
+@font-face {
+    font-family: BadScript;
+    src: url('BadScript-Regular.ttf');
+}
+
+/*
+    M06: Project V3 - Responsive Design and Tables
+
+    Style Sheet
+    Author: Zoe Dimof
+    Date: 5/30/2020
+
+    Filename: styles.css
+*/
+
+/* GRID */
+div[class^="row"] {
+    clear: both;
+}
+
+div[class^="col"] {
+    width: 50%;
+    float: left;
+}
+
+/* BODY STYLES */
+body {
+    font-family: MontserratRegular, sans-serif;
+    background: url("bg.png") repeat;
+    background-size: 200px auto;
+}
+
+.content {
+    margin-left: 2%;
+    padding-top: 6%;
+}
+
+section {
+    width: 50%;
+    margin-top: 11%;
+    padding: 30px;
+    float: left;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: rgb(179, 163, 137) 0px 10px 20px;
+    box-shadow: hsl(37, 22%, 62%) 0px 10px 20px;
+}
+
+section#about {
+    width: 93.5%;
+    margin-top: 3%;
+}
+
+section#flex1 {
+    margin-right: 2%;
+
+    -webkit-flex: 1 1 100px;
+    flex: 1 1 100px;
+}
+
+/* M5LO6 Demonstrate use of properties of flexbox items.
+The initial size of the flex item below is 300px. It also has a grow value of 3 and a shrink value of 1. It grows in proportion to the flex item next to it. Since it has a grow value of 3, and the other item has a grow value of 1, this flex item will adapt to a substantially larger size when the veiwport widens. */
+section#flex2 {
+    -webkit-flex: 1 1 300px;
+    flex: 3 1 300px;
+}
+
+div.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section#right {
+    width: 88%;
+}
+
+section#left {
+    width: 88%;
+    margin-left: 10%;
+}
+
+section.residents {
+    width: 35%;
+    margin-top: 8%;
+    position: relative;
+    left: -15%;
+    overflow-x: scroll;
+}
+
+section p {
+    padding-right: 6.5%;
+    padding-left: 6.5%;
+}
+
+div.row3#home {
+    padding-top: 5%;
+    text-align: center;
+}
+
+/* IMAGE STYLES */
+img#homeimg {
+    width: 40%;
+    margin-top: 3%;
+    float: left;
+}
+
+img.shopimg {
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 30%;
+}
+
+img.shopimg#shopimg, img.museumimg#museumimg {
+    margin-top: 5%;
+}
+
+img.museumimg {
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 10%;
+}
+
+img#sherb, img#sherb_shadow {
+    width: 30%;
+    float: left;
+    padding-top: 5%;
+}
+
+img#sherb {
+    position: relative;
+    padding-top: 7%;
+    left: -22%;
+}
+
+img#sherb_shadow {
+    height: 20vh;
+    padding-top: 27%;
+    opacity: 20%;
+    position: relative;
+    left: -14%;
+    -webkit-filter: brightness(0.3);
+    filter: brightness(0.3);
+    transform: skewX(50deg);
+}
+
+/* M6LO7 Demonstrate how to format a table with CSS.
+Below are all of the styles for my table. I changed the heights of the rows and the width's of the columns, as well as the colors for the backgrounds and borders that I have added. I also have the border collapse set to separate because I think it looks interesting that way. */
+/* TABLES */
+table.abouttable {
+    background-color: rgb(203, 238, 255);
+    background-color: hsl(200, 100%, 89.8%);
+    border: 5px solid;
+    border-color: rgb(60, 140, 215);
+    border-color: hsl(209, 66%, 54%);
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+table.abouttable thead tr:first-of-type {
+    height: 50px;
+}
+
+table.abouttable thead tr:first-of-type th {
+    background-color: rgb(60, 140, 215);
+    background-color: hsl(209, 66%, 54%);
+    border: 4px solid;
+    border-color: rgb(60, 140, 215);
+    border-color: hsl(209, 66%, 54%);
+    font-size: 22px;
+    color: rgb(14, 46, 77);
+    color: hsl(210, 69.2%, 17.8%);
+}
+
+table.abouttable thead tr:last-of-type {
+    height: 35px;
+}
+
+table.abouttable thead tr:last-of-type th {
+    background-color: rgb(138, 216, 255);
+    background-color: hsl(200, 100%, 77%);
+    border: 4px solid;
+    border-color: rgb(60, 140, 215);
+    border-color: hsl(209, 66%, 54%);
+    font-size: 18px;
+    color: rgb(14, 46, 77);
+    color: hsl(210, 69.2%, 17.8%);
+}
+
+table.abouttable th, table.abouttable td {
+    border: 4px solid;
+    border-color: rgb(138, 216, 255);
+    border-color: hsl(200, 100%, 77%);
+}
+
+col#verCol {
+    width: 8%;
+    background-color: rgb(219, 243, 255);
+    background-color: hsl(200, 100%, 92.9%);
+}
+
+col#dateCol {
+    width: 8%;
+    background-color: rgb(244, 251, 255);
+    background-color: hsl(191, 100%, 95.9%);
+}
+
+col#detailsCol {
+    width: 70%;
+    background-color: white;
+}
+
+table.abouttable tbody tr {
+    height: 50px;
+}
+
+table.abouttable tfoot tr {
+    height: 50px;
+}
+
+table.abouttable tfoot tr td {
+    background-color: rgb(60, 140, 215);
+    background-color: hsl(209, 66%, 54%);
+    border: 4px solid;
+    border-color: rgb(60, 140, 215);
+    border-color: hsl(209, 66%, 54%);
+    font-size: 22px;
+    color: rgb(14, 46, 77);
+    color: hsl(210, 69.2%, 17.8%);
+    text-align: center;
+    font-weight: bold;
+}
+
+/* FIGURE BOXES */
+figure figcaption {
+    width: 48%;
+    padding: 1%;
+    background-color: white;
+    text-align: center;
+    font-size: 0.8em;
+    color: rgb(46, 107, 163);
+    color: hsl(209, 56%, 41%);
+}
+
+figure figcaption.right {
+    margin-left: 30%;
+}
+
+figure figcaption.left {
+    margin-left: 10%;
+}
+
+/* TEXT STYLES */
+h1 {
+    font-family: BadScript, sans-serif;
+    font-size: 2em;
+    color: rgb(46, 107, 163);
+    color: hsl(209, 56%, 41%);
+}
+
+h1::first-letter {
+    font-size: 2em;
+}
+
+/* HEADER NAVIGATION STYLES*/
+header {
+    width: 100%;
+    background-color: rgb(138, 216, 255);
+    background-color: hsl(200, 100%, 77%);
+    border: 5px solid;
+    border-color: rgb(60, 140, 215);
+    border-color: hsl(209, 66%, 54%);
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1;
+}
+
+img#logoimg {
+    width: 100px;
+}
+
+li.nav {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-right: 3%;
+    padding-left: 3%;
+    
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+a#navicon {
+    display: none;
+}
+
+/* M5LO5 Demonstrate the use of flexboxes on a web page.
+Below I have used flexboxes on the navigation bar. This way, when the viewport becomes too small to fit all of the navigation links on one line, they wrap around to the next row. */
+/* M5LO7 Demonstrate use of properties of flexbox containers.
+The ul below is the flexbox container. It's direction is row, it wraps, and the items inside are spaced evenly. */
+div.row1 ul {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+a#logoa {
+    margin: -25px;
+    margin-top: -20px;
+}
+
+li.nav a.standard {
+    height: 20px;
+    padding: 5px 25px 5px 25px;
+    color: white;
+    background-color: rgb(60, 140, 215);
+    background-color: hsl(209, 66%, 54%);
+    border-radius: 5px;
+    
+    -webkit-flex: 1 1 25px;
+    flex: 1 1 25px;
+}
+
+li.nav a.standard:hover {
+    color: rgb(248, 235, 216);
+    color: hsl(35, 69%, 91%);
+    background-color: rgb(46, 107, 163);
+    background-color: hsl(209, 56%, 41%);
+}
+
+/* IMAGE NAGIVATION STYLES */
+img.imglink {
+    width: 46%;
+    margin: 1%;
+    float: left;
+}
+
+div.row3#home img:hover {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+}
+
+/* FOOTER STYLES */
+footer {
+    clear: both;
+    padding-left: 2%;
+    color: rgb(179, 163, 137);
+    color: hsl(37, 22%, 62%);
+    font-size: 0.8em;
+    text-decoration: underline;
+}
+
+footer.alt {
+    padding-top: 1%;
+}
+
+/*M5LO3 Use media queries to format a page differently for phones vs. PCs.
+Below are the mobile styles. I used a media query to change a few things when viewing the website on phones. There aren't a bunch of things right next to each other, because that would make things harder to see on a phone. Everything is on its own row. */
+/* MOBILE STYLES */
+@media only screen and (max-width: 480px) {
+
+    /* M5LO4 Use CSS for pull-down menus (or collapsible/expandable areas).
+    Below are the changes to the navigation bar that I made for mobile viewing. The navicon is hidden regularly, but in mobile view it is visible! Also, when you hover over the navicon and header, the pull-down menu appears that has all of the navigation bar's links. */
+    /* MOBILE HEADER */
+    a#navicon {
+        display: block;
+    }
+
+    img#navimg {
+        width: 10%;
+        padding: 2%;
+    }
+
+    nav.horizontal ul{
+        display: none;
+    }
+
+    a#navicon:hover+ul, nav.horizontal ul:hover {
+        display: block;
+    }
+
+    li.nav {
+        margin-top: 7%;
+    }
+
+    /* MOBILE BODY */
+    section {
+        width: 85%;
+        padding: 20px;
+    }
+
+    /* MOBILE IMAGES */
+    img#logoimg {
+        margin-top: -30px;
+    }
+
+    img#homeimg {
+        width: 100%;
+        margin-top: 15%;
+        margin-left: 4%;
+        text-align: center;
+    }
+
+    /* MOBILE IMAGE LINKS */
+    img.imglink {
+        width: 95%;
+    }
+}
