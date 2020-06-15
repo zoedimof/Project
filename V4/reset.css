@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+/* M3LO1 Demonstrate the use of a CSS reset style sheet.
+This CSS style sheet resets the website's styles. */
+
+/*
+    V4 - Finalize Project
+
+    Reset Style Sheet
+    Author: Zoe Dimof
+    Date: 6/15/2020
+
+    Filename: reset.css
+*/
+
+address, article, aside, blockquote, body, cite, div, dl, dt, dd, em, figcaption, figure, footer, h2, h3, h4, h5, h6, header, html, img, li, main, nav, ol, section, span, ul {
+    background: transparent;
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+nav ul {
+    list-style: none;
+    list-style-image: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+body {
+    line-height: 1;
+}

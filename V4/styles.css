@@ -1,0 +1,466 @@
+@charset "UTF-8";
+@font-face {
+    font-family: MontserratRegular;
+    src: url('Montserrat-Regular.ttf')
+}
+@font-face {
+    font-family: BadScript;
+    src: url('BadScript-Regular.ttf');
+}
+
+/*
+    V4 - Finalize Project
+
+    Style Sheet
+    Author: Zoe Dimof
+    Date: 6/15/2020
+
+    Filename: styles.css
+*/
+
+/* GRID */
+div[class^="row"] {
+    clear: both;
+}
+
+div[class^="col"] {
+    width: 50%;
+    float: left;
+}
+
+/* BODY STYLES */
+body {
+    font-family: MontserratRegular, sans-serif;
+    background: url("bg.png") repeat;
+    background-size: 200px auto;
+}
+
+.content {
+    margin-left: 2%;
+    padding-top: 6%;
+}
+
+section {
+    width: 50%;
+    margin-top: 11%;
+    padding: 30px;
+    float: left;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: rgb(179, 163, 137) 0px 10px 20px;
+    box-shadow: hsl(37, 22%, 62%) 0px 10px 20px;
+}
+
+section#about {
+    width: 93.5%;
+    margin-top: 3%;
+}
+
+section#flex1 {
+    margin-right: 2%;
+
+    -webkit-flex: 1 1 100px;
+    flex: 1 1 100px;
+}
+
+section#flex2 {
+    -webkit-flex: 1 1 300px;
+    flex: 3 1 300px;
+}
+
+div.container {
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 10px;
+
+    display: -webkit-flex;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+section#right {
+    width: 88%;
+}
+
+section#left {
+    width: 88%;
+    margin-left: 10%;
+}
+
+iframe {
+    position: absolute;
+    width: 55%;
+    height: 500px;
+    margin-top: 5%;
+    left: 42%;
+    overflow-x: scroll;
+    float: left;
+}
+
+section p {
+    padding-right: 6.5%;
+    padding-left: 6.5%;
+}
+
+div.row3#home {
+    padding-top: 5%;
+    text-align: center;
+}
+
+/* IMAGE STYLES */
+img#homeimg {
+    width: 40%;
+    margin-top: 3%;
+    float: left;
+}
+
+img.shopimg, img.orchardimg {
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 30%;
+}
+
+img.shopimg#shopimg, img.museumimg#museumimg, img.orchardimg#orchardimg, img.bambooimg#bambooimg {
+    margin-top: 5%;
+}
+
+img.museumimg, img.bambooimg {
+    width: 50%;
+    margin-top: 1%;
+    margin-left: 10%;
+}
+
+img#sherb, img#sherb_shadow {
+    width: 30%;
+    float: left;
+    padding-top: 5%;
+}
+
+img#bianca, img#bianca_shadow {
+    width: 27%;
+    float: left;
+    padding-top: 5%;
+}
+
+img#sherb, img#bianca {
+    position: relative;
+    left: -22%;
+    padding-top: 7%;
+    text-align: left;
+}
+
+img#sherb_shadow, img#bianca_shadow {
+    height: 20vh;
+    padding-top: 27%;
+    opacity: 20%;
+    position: relative;
+    left: -14%;
+    -webkit-filter: brightness(0.3);
+    filter: brightness(0.3);
+    transform: skewX(50deg);
+}
+
+img#bianca_shadow {
+    padding-top: 26%;
+    left: -17%;
+}
+
+/* TABLES */
+table.abouttable {
+    background-color: rgb(203, 238, 255);
+    background-color: hsl(200, 100%, 89.8%);
+    border: 5px solid;
+    border-color: rgb(60, 140, 215);
+    border-color: hsl(209, 66%, 54%);
+    border-collapse: separate;
+    border-spacing: 5px;
+}
+
+table.abouttable thead tr:first-of-type {
+    height: 50px;
+}
+
+table.abouttable thead tr:first-of-type th {
+    background-color: rgb(60, 140, 215);
+    background-color: hsl(209, 66%, 54%);
+    border: 4px solid;
+    border-color: rgb(60, 140, 215);
+    border-color: hsl(209, 66%, 54%);
+    font-size: 22px;
+    color: rgb(14, 46, 77);
+    color: hsl(210, 69.2%, 17.8%);
+}
+
+table.abouttable thead tr:last-of-type {
+    height: 35px;
+}
+
+table.abouttable thead tr:last-of-type th {
+    background-color: rgb(138, 216, 255);
+    background-color: hsl(200, 100%, 77%);
+    border: 4px solid;
+    border-color: rgb(60, 140, 215);
+    border-color: hsl(209, 66%, 54%);
+    font-size: 18px;
+    color: rgb(14, 46, 77);
+    color: hsl(210, 69.2%, 17.8%);
+}
+
+table.abouttable th, table.abouttable td {
+    border: 4px solid;
+    border-color: rgb(138, 216, 255);
+    border-color: hsl(200, 100%, 77%);
+}
+
+col#verCol {
+    width: 8%;
+    background-color: rgb(219, 243, 255);
+    background-color: hsl(200, 100%, 92.9%);
+}
+
+col#dateCol {
+    width: 8%;
+    background-color: rgb(244, 251, 255);
+    background-color: hsl(191, 100%, 95.9%);
+}
+
+col#detailsCol {
+    width: 70%;
+    background-color: white;
+}
+
+table.abouttable tbody tr {
+    height: 50px;
+}
+
+table.abouttable tfoot tr {
+    height: 50px;
+}
+
+table.abouttable tfoot tr td {
+    background-color: rgb(60, 140, 215);
+    background-color: hsl(209, 66%, 54%);
+    border: 4px solid;
+    border-color: rgb(60, 140, 215);
+    border-color: hsl(209, 66%, 54%);
+    font-size: 22px;
+    color: rgb(14, 46, 77);
+    color: hsl(210, 69.2%, 17.8%);
+    text-align: center;
+    font-weight: bold;
+}
+
+/* AUDIO PLAYER */
+/*M8LO12 Demonstrate how to format media with CSS
+I made the audio player wider, since the track it plays is actually pretty long. I also rounded the borders, because I generally think rounded borders look nicer than straight edges.*/
+audio {
+    margin-left: 7%;
+    margin-top: 3%;
+    border-radius: 90px;
+    width: 80%;
+}
+
+/* FIGURE BOXES */
+figure figcaption {
+    width: 48%;
+    padding: 1%;
+    background-color: white;
+    text-align: center;
+    font-size: 0.8em;
+    color: rgb(46, 107, 163);
+    color: hsl(209, 56%, 41%);
+}
+
+figure figcaption.right {
+    margin-left: 30%;
+}
+
+figure figcaption.left {
+    margin-left: 10%;
+}
+
+figure figcaption#audio {
+    margin-left: 7%;
+    margin-bottom: 2%;
+    width: 78%;
+    border-radius: 90px;
+}
+
+figure figcaption#audio a {
+    color: rgb(46, 107, 163);
+    color: hsl(209, 56%, 41%);
+    text-decoration: none;
+}
+
+figure figcaption#audio a:hover {
+    color: rgb(14, 46, 77);
+    color: hsl(210, 69.2%, 17.8%);
+}
+
+/* TEXT STYLES */
+h1 {
+    font-family: BadScript, sans-serif;
+    font-size: 2em;
+    color: rgb(46, 107, 163);
+    color: hsl(209, 56%, 41%);
+}
+
+h1::first-letter {
+    font-size: 2em;
+}
+
+/* HEADER NAVIGATION STYLES*/
+header {
+    width: 100%;
+    background-color: rgb(138, 216, 255);
+    background-color: hsl(200, 100%, 77%);
+    border: 5px solid;
+    border-color: rgb(60, 140, 215);
+    border-color: hsl(209, 66%, 54%);
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: fixed;
+    z-index: 1;
+}
+
+img#logoimg {
+    width: 100px;
+    transition: width 1s;
+}
+
+img#logoimg:hover {
+    width: 130px;
+}
+
+li.nav {
+    margin-top: 2%;
+    margin-bottom: 2%;
+    padding-right: 3%;
+    padding-left: 3%;
+    
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+a#navicon {
+    display: none;
+}
+
+div.row1 ul {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+a#logoa {
+    margin: -25px;
+    margin-top: -20px;
+}
+
+li.nav a.standard {
+    height: 20px;
+    padding: 5px 25px 5px 25px;
+    color: white;
+    background-color: rgb(60, 140, 215);
+    background-color: hsl(209, 66%, 54%);
+    border-radius: 5px;
+    
+    -webkit-flex: 1 1 25px;
+    flex: 1 1 25px;
+
+    /*M8LO10 Demonstrate a CSS animation or transition.
+    I made the navigation buttons on the menu transition from one color to another when hovered over.*/
+    transition: background-color .6s;
+}
+
+li.nav a.standard:hover {
+    color: rgb(248, 235, 216);
+    color: hsl(35, 69%, 91%);
+    background-color: rgb(46, 107, 163);
+    background-color: hsl(209, 56%, 41%);
+}
+
+/* IMAGE NAGIVATION STYLES */
+img.imglink {
+    width: 46%;
+    margin: 1%;
+    float: left;
+}
+
+div.row3#home img {
+    transition: -webkit-filter .6s;
+    transition: filter .6s;
+}
+
+div.row3#home img:hover {
+    -webkit-filter: brightness(0.7);
+    filter: brightness(0.7);
+}
+
+/* FOOTER STYLES */
+footer {
+    clear: both;
+    padding-left: 2%;
+    color: rgb(179, 163, 137);
+    color: hsl(37, 22%, 62%);
+    font-size: 0.8em;
+    text-decoration: underline;
+}
+
+footer.alt {
+    padding-top: 1%;
+}
+
+/* MOBILE STYLES */
+@media only screen and (max-width: 480px) {
+
+    /* MOBILE HEADER */
+    a#navicon {
+        display: block;
+    }
+
+    img#navimg {
+        width: 10%;
+        padding: 2%;
+    }
+
+    nav.horizontal ul{
+        display: none;
+    }
+
+    a#navicon:hover+ul, nav.horizontal ul:hover {
+        display: block;
+    }
+
+    li.nav {
+        margin-top: 7%;
+    }
+
+    /* MOBILE BODY */
+    section {
+        width: 85%;
+        padding: 20px;
+    }
+
+    /* MOBILE IMAGES */
+    img#logoimg {
+        margin-top: -30px;
+    }
+
+    img#homeimg {
+        width: 100%;
+        margin-top: 15%;
+        margin-left: 4%;
+        text-align: center;
+    }
+
+    /* MOBILE IMAGE LINKS */
+    img.imglink {
+        width: 95%;
+    }
+}
